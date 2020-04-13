@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+{% block title %}Customer list{% endblock %}
+{% block stylesheets %}
+{% endblock %}
+{% block body %}
+    <h2>Customer list</h2>
+
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <td>Id</td>
+                <td>{{ customer.id }}</td>
+            </tr>
+            <tr>
+                <td>Prenom</td>
+                <td>{{ customer.firstname }}</td>
+            </tr>
+            <tr>
+                <td>Nom</td>
+                <td>{{ contact.lastname }}</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>{{ customer.email }}</td>
+            </tr>
+            <tr>
+                <td>Telephone</td>
+                <td>{{ customer.phoneNumber }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
